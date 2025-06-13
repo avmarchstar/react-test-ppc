@@ -1,19 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  root: '.', // указывает корень проекта
+  root: '.', // Корень проекта
+  publicDir: 'dist', // Папка для статики
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      },
-    },
+    outDir: 'public', // Куда складывать сборку
+    emptyOutDir: true, // Очищать dist перед сборкой
   },
   server: {
-    open: true, // автоматически открывает браузер
+    open: true, // Открывать браузер при запуске dev-сервера
   },
 })
