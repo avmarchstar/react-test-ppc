@@ -6,7 +6,7 @@ import "./styles.css";
 
 const App = () => {
   return (
-    <Router basename="/react-test-ppc">
+    <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/second" element={<SecondPage />} />
