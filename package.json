@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && npm run ghp",
+    "ghp": "cp -a test/ghp/. dist/ && cd dist && git fetch --all && git add . -f && git commit -am 'Deploy to GitHub Pages' || true && git push -u origin gh-pages --force && cd .."
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -25,5 +27,5 @@
     "globals": "^16.0.0",
     "vite": "^6.3.5"
   },
-  "homepage": "https://avmarchstar.github.io/react-test-ppc/dist"
+  "homepage": "https://avmarchstar.github.io/react-test-ppc/"
 }
