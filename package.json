@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && npm run ghp",
-    "ghp": "cp -a test/ghp/. dist/ && cd dist && git fetch --all && git add . -f && git commit -am 'Deploy to GitHub Pages' || true && git push -u origin gh-pages --force && cd .."
+    "ghp": "sudo cp -a test/ghp/. dist/ || true && cd dist && git fetch --all && git add . -f && git commit -am 'Deploy to GitHub Pages' || true && git push -u origin main --force && cd .."
   },
   "dependencies": {
     "react": "^19.1.0",
