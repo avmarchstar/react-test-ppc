@@ -13,6 +13,7 @@
     "ghp-init": "mkdir -p test/ghp && cp -a .gitignore test/ghp && cd test/ghp && git init && git branch -m ghp && git add . -f && git commit -m 'first commiit' || true && git remote add origin git@github.com:ashuksu/ghp.git &&  git push -u origin ghp --force && cd ../.."
   },
   "dependencies": {
+    "live-server": "^1.2.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1"
