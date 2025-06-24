@@ -3,6 +3,9 @@ import MainPage from "./pages/MainPage";
 import SecondPage from "./pages/SecondPage";
 import ThirdPage from "./pages/ThirdPage";
 import "./styles.css";
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize('G-MWS5FRV5B8'); 
 
 const App = () => {
   return (

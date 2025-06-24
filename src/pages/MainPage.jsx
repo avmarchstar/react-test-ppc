@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css"; // Импорт стилей
+import ReactGA from 'react-ga4';
 
 const MainPage = () => {
   const [email, setEmail] = useState("");
@@ -17,6 +18,22 @@ const MainPage = () => {
     }
   };
 
+
+
+
+  const handleClick = () => {
+    ReactGA.event({
+      category: 'User',
+      action: 'Click Main Button',
+      label: 'MainPageButton'
+    });
+  
+
+
+}
+
+  
+
   return (
     <div className="page-container">
       <h1 id="main-title">Main Page</h1>
@@ -29,7 +46,7 @@ const MainPage = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter email"
         />
-        <button id="submit-btn" type="submit">
+        <button id="submit-btn" type="submit" onClick={handleClick}>
           Submit
         </button>
         {error && <p id="error-message">{error}</p>}
